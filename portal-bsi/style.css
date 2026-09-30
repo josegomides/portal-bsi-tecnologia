@@ -207,3 +207,47 @@ main h1 {
 .tabela-comparativa tbody tr:nth-child(even) {
     background: rgba(91, 155, 213, 0.12);
 }
+
+
+/* ===== Boas práticas ===== */
+
+.secao ol {
+    padding-left: 1.5rem;
+    /* o reset zerou o recuo da ol; sem isso os números ficam fora da área visível */
+}
+
+.secao ol li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ===== Aside de links externos ===== */
+
+#links-externos {
+    background: var(--azul-claro);
+    padding: 1.25rem;
+    margin: 2rem;
+    border-radius: 6px;
+}
+
+#links-externos h2 {
+    color: var(--azul);
+    margin-bottom: 0.75rem;
+}
+
+#links-externos ul {
+    padding-left: 1.25rem;
+    /* mesmo motivo: devolver o recuo que o reset tirou */
+}
+
+#links-externos li {
+    margin-bottom: 0.5rem;
+}
+
+#links-externos a {
+    color: var(--azul2);
+}
+
+#links-externos a:hover {
+    color: var(--azul);
+}

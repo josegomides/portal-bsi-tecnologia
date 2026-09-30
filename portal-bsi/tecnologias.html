@@ -28,7 +28,67 @@
 
     <main>
         <h1>Tecnologias</h1>
-        <!-- sections entram aqui na Parte 2 -->
+        <section class="secao" id="introducao">
+            <h2>A stack web</h2>
+            <p>Toda página web é construída sobre três camadas: o HTML define a estrutura e o conteúdo, o CSS define a aparência e o JavaScript define o comportamento. Nesta página reunimos as tecnologias que estudamos no curso, com os conceitos principais
+                de cada uma, como um guia de referência para a turma.</p>
+        </section>
+
+        <section class="secao" id="tecnologias">
+            <h2>Tecnologias estudadas</h2>
+
+            <article class="card-tech">
+                <h3>HTML</h3>
+                <p>Linguagem de marcação que organiza o conteúdo da página. Serve para dizer ao navegador o que cada parte é: título, parágrafo, lista, tabela, navegação.</p>
+                <dl>
+                    <dt>Tag</dt>
+                    <dd>Marcação entre sinais de menor e maior que delimita um elemento, como &lt;p&gt; e &lt;/p&gt;.</dd>
+                    <dt>Atributo</dt>
+                    <dd>Informação extra dentro da tag de abertura, como href em um link ou alt em uma imagem.</dd>
+                    <dt>Semântica</dt>
+                    <dd>Uso da tag que descreve o significado do conteúdo, como header, nav e article, em vez de div.</dd>
+                </dl>
+            </article>
+
+            <article class="card-tech">
+                <h3>CSS</h3>
+                <p>Linguagem de estilo que controla a aparência da página. Serve para definir cores, fontes, espaçamentos e posicionamento dos elementos.</p>
+                <dl>
+                    <dt>Seletor</dt>
+                    <dd>Parte da regra que indica quais elementos recebem o estilo, como .classe, #id ou uma tag.</dd>
+                    <dt>Especificidade</dt>
+                    <dd>Critério que decide qual regra vence quando duas se aplicam ao mesmo elemento.</dd>
+                    <dt>Box model</dt>
+                    <dd>Modelo em que todo elemento é uma caixa formada por conteúdo, padding, border e margin.</dd>
+                </dl>
+            </article>
+
+            <article class="card-tech">
+                <h3>JavaScript</h3>
+                <p>Linguagem de programação que roda no navegador. Serve para adicionar interatividade: responder a cliques, validar formulários e alterar a página sem recarregar.</p>
+                <dl>
+                    <dt>Variável</dt>
+                    <dd>Espaço nomeado que guarda um valor para ser usado depois no código.</dd>
+                    <dt>Função</dt>
+                    <dd>Bloco de código reutilizável que executa uma tarefa quando é chamado.</dd>
+                    <dt>Evento</dt>
+                    <dd>Ação do usuário ou do navegador, como um clique, que o código pode detectar e tratar.</dd>
+                </dl>
+            </article>
+
+            <article class="card-tech">
+                <h3>Git</h3>
+                <p>Sistema de controle de versão. Serve para registrar o histórico do projeto e permitir que várias pessoas trabalhem no mesmo código sem perder alterações.</p>
+                <dl>
+                    <dt>Repositório</dt>
+                    <dd>Pasta do projeto acompanhada pelo Git, com todo o histórico de alterações.</dd>
+                    <dt>Commit</dt>
+                    <dd>Registro de um conjunto de alterações, com uma mensagem que descreve o que mudou.</dd>
+                    <dt>Push</dt>
+                    <dd>Envio dos commits locais para o repositório remoto, como o GitHub.</dd>
+                </dl>
+            </article>
+        </section>
     </main>
 
     <aside id="links-externos">

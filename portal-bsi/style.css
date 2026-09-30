@@ -251,3 +251,38 @@ main h1 {
 #links-externos a:hover {
     color: var(--azul);
 }
+
+
+/* =====================================================================
+   ELEMENTO EXTRA: transition
+   O que é: anima a mudança de uma propriedade CSS ao longo do tempo.
+   Sem transition, a cor muda de uma vez no :hover; com ela, a mudança
+   acontece de forma gradual.
+
+   Como funciona: transition: <propriedade> <duração> <curva>;
+     - color / box-shadow: qual propriedade será animada
+     - 0.3s: quanto tempo a animação dura (300 milissegundos)
+     - ease: curva de velocidade (começa devagar, acelera e desacelera
+       no fim), o que deixa o movimento mais natural
+
+   A transition fica no estado normal, não no :hover. Assim ela funciona
+   nos dois sentidos: quando o mouse entra e quando sai.
+
+   Por que escolhemos: deixa a navegação mais agradável sem distrair,
+   e reforça visualmente qual elemento está sob o mouse.
+   ===================================================================== */
+
+.link-nav {
+    transition: color 0.3s ease;
+}
+
+.card-tech {
+    transition: box-shadow 0.3s ease;
+}
+
+
+/* Sombra com rgba() a partir do --azul (26, 58, 92), como o enunciado autoriza */
+
+.card-tech:hover {
+    box-shadow: 0 4px 12px rgba(26, 58, 92, 0.15);
+}

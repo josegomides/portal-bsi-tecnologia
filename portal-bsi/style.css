@@ -1,0 +1,119 @@
+/* ===== Paleta oficial do portal ===== */
+
+:root {
+    --azul: #1A3A5C;
+    --azul2: #2563A8;
+    --azul3: #5B9BD5;
+    --dourado: #C8922A;
+    --fundo: #F5F7FA;
+    --tinta: #1A1A2E;
+    --cinza: #5A6270;
+    --linha: #D0D7E3;
+    --branco: #FFFFFF;
+    /* Cor exigida no enunciado para o aside do Grupo 5.
+Criada como variável com autorização do professor no fórum. */
+    --azul-claro: #EAF0F8;
+}
+
+
+/* ===== Reset: primeira regra após o :root (exigência do enunciado) ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ===== Reset: primeira regra após o :root (exigência do enunciado) ===== */
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--tinta);
+    background-color: var(--fundo);
+}
+
+
+/* ===== Cabeçalho ===== */
+
+#cabecalho {
+    background-color: var(--azul);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    color: var(--branco);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* ===== Menu ===== */
+
+#menu-principal ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.link-nav {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-nav:hover {
+    color: var(--dourado);
+}
+
+.link-nav.ativo {
+    color: var(--dourado);
+}
+
+
+/* Foco visível pra quem navega pelo teclado (regra de outline acessível) */
+
+a:focus-visible {
+    outline: 2px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+
+/* ===== Conteúdo ===== */
+
+main h1 {
+    color: var(--azul);
+    padding: 2rem 2rem 0;
+}
+
+.secao {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--linha);
+}
+
+
+/* ===== Rodapé ===== */
+
+#rodape {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 2rem;
+    text-align: center;
+}
+
+#rodape a {
+    color: var(--branco);
+}
+
+#rodape a:hover {
+    color: var(--dourado);
+}

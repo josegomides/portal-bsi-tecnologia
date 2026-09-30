@@ -161,3 +161,49 @@ main h1 {
     /* o reset zerou o recuo padrão do dd; aqui ele volta */
     margin-bottom: 0.5rem;
 }
+
+
+/* ===== Tabela comparativa ===== */
+
+.tabela-comparativa {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+}
+
+.tabela-comparativa caption {
+    color: var(--cinza);
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+.tabela-comparativa th,
+.tabela-comparativa td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--linha);
+}
+
+
+/* Explícito mesmo o navegador já centralizando por padrão:
+   o requisito é que a regra exista no CSS */
+
+.tabela-comparativa th {
+    text-align: center;
+}
+
+.tabela-comparativa thead th {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.tabela-comparativa tbody th {
+    color: var(--azul);
+}
+
+
+/* Linhas alternadas: rgba() a partir do --azul3 (91, 155, 213),
+   como o enunciado autoriza para variações de opacidade */
+
+.tabela-comparativa tbody tr:nth-child(even) {
+    background: rgba(91, 155, 213, 0.12);
+}

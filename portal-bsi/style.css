@@ -1,52 +1,58 @@
+/* COMMIT 08 â€” 17:55 â€” JosÃ© Antonio
+   Arquivo: CSS | ResponsÃ¡vel: JosÃ© Antonio
+   Etapa: EstilizaÃ§Ã£o da tabela
+*/
+
+
 /* =====================================================================
-   style.css COMENTADO PARA ESTUDO — Grupo 5, página tecnologias.html
+   style.css COMENTADO PARA ESTUDO â€” Grupo 5, pÃ¡gina tecnologias.html
    Ordem do arquivo (exigida pelo enunciado):
-   1º :root (cores)  →  2º reset  →  3º o resto
+   1Âº :root (cores)  â†’  2Âº reset  â†’  3Âº o resto
    ===================================================================== */
 
 
-/* ===== 1. PALETA DE CORES (variáveis) =====
-   :root é o elemento mais alto da página. As variáveis criadas aqui
-   valem para a página inteira.
+/* ===== 1. PALETA DE CORES (variÃ¡veis) =====
+   :root Ã© o elemento mais alto da pÃ¡gina. As variÃ¡veis criadas aqui
+   valem para a pÃ¡gina inteira.
    Para usar uma cor: var(--azul).
-   Vantagem: se a cor mudar, muda num lugar só e a página toda acompanha.
+   Vantagem: se a cor mudar, muda num lugar sÃ³ e a pÃ¡gina toda acompanha.
    REGRA DO ENUNCIADO: nenhuma cor em hexadecimal (#...) fora do :root. */
 
 :root {
     --azul: #1A3A5C;
-    /* cor principal: cabeçalho, rodapé, títulos */
+    /* cor principal: cabeÃ§alho, rodapÃ©, tÃ­tulos */
     --azul2: #2563A8;
-    /* azul médio: borda de cima dos cards */
+    /* azul mÃ©dio: borda de cima dos cards */
     --azul3: #5B9BD5;
     /* azul claro: linhas alternadas da tabela */
     --dourado: #C8922A;
     /* destaque: hover do menu, link ativo */
     --fundo: #F5F7FA;
-    /* fundo da página */
+    /* fundo da pÃ¡gina */
     --tinta: #1A1A2E;
     /* cor do texto principal */
     --cinza: #5A6270;
-    /* texto secundário (dd, caption) */
+    /* texto secundÃ¡rio (dd, caption) */
     --linha: #D0D7E3;
     /* bordas e separadores */
     --branco: #FFFFFF;
     /* Cor exigida no enunciado para o aside do Grupo 5.
-       Ela não estava na paleta, então escrever o hex direto no aside
-       violaria a regra. Criamos a variável com autorização do professor no fórum. */
+       Ela nÃ£o estava na paleta, entÃ£o escrever o hex direto no aside
+       violaria a regra. Criamos a variÃ¡vel com autorizaÃ§Ã£o do professor no fÃ³rum. */
     --azul-claro: #EAF0F8;
 }
 
 
 /* ===== 2. RESET =====
-   Tem que ser a primeira regra depois do :root (exigência do enunciado).
-   O * seleciona TODOS os elementos da página. */
+   Tem que ser a primeira regra depois do :root (exigÃªncia do enunciado).
+   O * seleciona TODOS os elementos da pÃ¡gina. */
 
 * {
     /* padding e borda passam a contar DENTRO da largura.
        Sem isso, uma caixa com width 100% + padding fica maior que a tela. */
     box-sizing: border-box;
-    /* Cada navegador tem espaçamentos padrão diferentes.
-       Zeramos tudo para todos começarem do mesmo ponto. */
+    /* Cada navegador tem espaÃ§amentos padrÃ£o diferentes.
+       Zeramos tudo para todos comeÃ§arem do mesmo ponto. */
     margin: 0;
     padding: 0;
     /* Efeito colateral: listas (ol, ul) e dd perdem o recuo.
@@ -54,9 +60,9 @@
 }
 
 
-/* ===== 3. BASE: font-family só aqui, os filhos herdam =====
-   HERANÇA: os elementos de dentro do body recebem essas propriedades
-   automaticamente. Repetir a fonte em cada seletor seria desnecessário,
+/* ===== 3. BASE: font-family sÃ³ aqui, os filhos herdam =====
+   HERANÃ‡A: os elementos de dentro do body recebem essas propriedades
+   automaticamente. Repetir a fonte em cada seletor seria desnecessÃ¡rio,
    e o enunciado cobra isso. */
 
 body {
@@ -64,13 +70,13 @@ body {
     /* se a Inter falhar, usa Arial */
     font-size: 16px;
     line-height: 1.6;
-    /* espaço entre as linhas do texto */
+    /* espaÃ§o entre as linhas do texto */
     color: var(--tinta);
     background-color: var(--fundo);
 }
 
 
-/* ===== 4. CABEÇALHO (modelo padronizado pela turma) ===== */
+/* ===== 4. CABEÃ‡ALHO (modelo padronizado pela turma) ===== */
 
 #cabecalho {
     background-color: var(--azul);
@@ -98,18 +104,18 @@ body {
 }
 
 
-/* Link da página atual (exigência do enunciado, seção 7).
-   .link-nav.ativo SEM espaço = o MESMO elemento com as DUAS classes. */
+/* Link da pÃ¡gina atual (exigÃªncia do enunciado, seÃ§Ã£o 7).
+   .link-nav.ativo SEM espaÃ§o = o MESMO elemento com as DUAS classes. */
 
 .link-nav.ativo {
     color: var(--dourado);
 }
 
 
-/* ===== 5. FOCO ACESSÍVEL =====
+/* ===== 5. FOCO ACESSÃVEL =====
    Quando a pessoa navega pela tecla Tab, aparece um contorno dourado no link.
-   :focus-visible mostra o contorno para quem usa o teclado, mas não no clique do mouse.
-   O enunciado proíbe outline: none sem substituto. Nós não removemos, só personalizamos. */
+   :focus-visible mostra o contorno para quem usa o teclado, mas nÃ£o no clique do mouse.
+   O enunciado proÃ­be outline: none sem substituto. NÃ³s nÃ£o removemos, sÃ³ personalizamos. */
 
 a:focus-visible {
     outline: 2px solid var(--dourado);
@@ -118,11 +124,11 @@ a:focus-visible {
 }
 
 
-/* ===== 6. CONTEÚDO ===== */
+/* ===== 6. CONTEÃšDO ===== */
 
 
-/* "main h1" COM espaço = seletor de descendente: o h1 que está DENTRO do main.
-   Garante que a regra só afete o título da página. */
+/* "main h1" COM espaÃ§o = seletor de descendente: o h1 que estÃ¡ DENTRO do main.
+   Garante que a regra sÃ³ afete o tÃ­tulo da pÃ¡gina. */
 
 main h1 {
     color: var(--azul);
@@ -131,7 +137,7 @@ main h1 {
 }
 
 
-/* Classe obrigatória das sections (enunciado: padding 3rem 2rem + borda embaixo). */
+/* Classe obrigatÃ³ria das sections (enunciado: padding 3rem 2rem + borda embaixo). */
 
 .secao {
     padding: 3rem 2rem;
@@ -139,7 +145,7 @@ main h1 {
 }
 
 
-/* ===== 7. RODAPÉ (modelo padronizado pela turma) ===== */
+/* ===== 7. RODAPÃ‰ (modelo padronizado pela turma) ===== */
 
 #rodape {
     background-color: var(--azul);
@@ -159,27 +165,27 @@ main h1 {
 }
 
 
-/* ===== 8. TÍTULOS DAS SEÇÕES ===== */
+/* ===== 8. TÃTULOS DAS SEÃ‡Ã•ES ===== */
 
 .secao h2 {
     color: var(--azul);
     margin-bottom: 1rem;
-    /* espaço entre o título e o conteúdo */
+    /* espaÃ§o entre o tÃ­tulo e o conteÃºdo */
 }
 
 
 /* ===== 9. CARDS DE TECNOLOGIA =====
-   BOX MODEL obrigatório do Grupo 5 (não mudar esses números):
+   BOX MODEL obrigatÃ³rio do Grupo 5 (nÃ£o mudar esses nÃºmeros):
    padding 1.5rem, margin-bottom 1.5rem, border-radius 6px.
-   padding = espaço de DENTRO (entre o conteúdo e a borda).
-   margin  = espaço de FORA (entre o card e o próximo). */
+   padding = espaÃ§o de DENTRO (entre o conteÃºdo e a borda).
+   margin  = espaÃ§o de FORA (entre o card e o prÃ³ximo). */
 
 .card-tech {
     background: var(--branco);
     border: 1px solid var(--linha);
     /* borda fina em volta */
     border-top: 4px solid var(--azul2);
-    /* borda de cima mais grossa (sobrescreve só o topo) */
+    /* borda de cima mais grossa (sobrescreve sÃ³ o topo) */
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 6px;
@@ -192,17 +198,17 @@ main h1 {
 }
 
 
-/* ===== 10. LISTA DE DEFINIÇÕES DENTRO DOS CARDS ===== */
+/* ===== 10. LISTA DE DEFINIÃ‡Ã•ES DENTRO DOS CARDS ===== */
 
 
-/* Obrigatório: dl com margin-top dentro do card. */
+/* ObrigatÃ³rio: dl com margin-top dentro do card. */
 
 .card-tech dl {
     margin-top: 1rem;
 }
 
 
-/* dt = o termo: negrito e azul (exigência do enunciado). */
+/* dt = o termo: negrito e azul (exigÃªncia do enunciado). */
 
 .card-tech dt {
     font-weight: bold;
@@ -210,12 +216,12 @@ main h1 {
 }
 
 
-/* dd = a explicação: cinza e com recuo (exigência do enunciado). */
+/* dd = a explicaÃ§Ã£o: cinza e com recuo (exigÃªncia do enunciado). */
 
 .card-tech dd {
     color: var(--cinza);
     margin-left: 1.5rem;
-    /* o reset zerou o recuo padrão do dd; aqui ele volta */
+    /* o reset zerou o recuo padrÃ£o do dd; aqui ele volta */
     margin-bottom: 0.5rem;
 }
 
@@ -224,7 +230,7 @@ main h1 {
 
 .tabela-comparativa {
     width: 100%;
-    /* ocupa toda a largura da seção */
+    /* ocupa toda a largura da seÃ§Ã£o */
     border-collapse: collapse;
     /* junta as bordas vizinhas: sem linha dupla */
     background: var(--branco);
@@ -237,7 +243,7 @@ main h1 {
 }
 
 
-/* Vírgula no seletor = a mesma regra vale para th E para td. */
+/* VÃ­rgula no seletor = a mesma regra vale para th E para td. */
 
 .tabela-comparativa th,
 .tabela-comparativa td {
@@ -246,15 +252,15 @@ main h1 {
 }
 
 
-/* Explícito mesmo o navegador já centralizando por padrão:
-   o requisito é que a regra exista no CSS */
+/* ExplÃ­cito mesmo o navegador jÃ¡ centralizando por padrÃ£o:
+   o requisito Ã© que a regra exista no CSS */
 
 .tabela-comparativa th {
     text-align: center;
 }
 
 
-/* Cabeçalho da tabela: fundo azul e texto branco. */
+/* CabeÃ§alho da tabela: fundo azul e texto branco. */
 
 .tabela-comparativa thead th {
     background: var(--azul);
@@ -270,97 +276,11 @@ main h1 {
 
 
 /* Linhas alternadas: rgba() a partir do --azul3 (91, 155, 213),
-   como o enunciado autoriza para variações de opacidade.
-   nth-child(even) = linhas PARES (2ª, 4ª...). odd seria as ímpares.
+   como o enunciado autoriza para variaÃ§Ãµes de opacidade.
+   nth-child(even) = linhas PARES (2Âª, 4Âª...). odd seria as Ã­mpares.
    0.12 = 12% de opacidade.
-   Limite: se o --azul3 mudar, este valor não muda junto. */
+   Limite: se o --azul3 mudar, este valor nÃ£o muda junto. */
 
 .tabela-comparativa tbody tr:nth-child(even) {
     background: rgba(91, 155, 213, 0.12);
-}
-
-
-/* ===== 12. BOAS PRÁTICAS ===== */
-
-.secao ol {
-    padding-left: 1.5rem;
-    /* o reset zerou o recuo da ol; sem isso os números ficam fora da área visível */
-}
-
-.secao ol li {
-    margin-bottom: 0.5rem;
-    /* espaço entre os itens */
-}
-
-
-/* ===== 13. ASIDE DE LINKS EXTERNOS =====
-   Obrigatório: padding 1.25rem e o fundo azul-claro pedido no enunciado (pela variável --azul-claro). */
-
-#links-externos {
-    background: var(--azul-claro);
-    padding: 1.25rem;
-    margin: 2rem;
-    /* o aside não está dentro de uma .secao: sem margem, encostaria na borda da tela */
-    border-radius: 6px;
-}
-
-#links-externos h2 {
-    color: var(--azul);
-    margin-bottom: 0.75rem;
-}
-
-#links-externos ul {
-    padding-left: 1.25rem;
-    /* mesmo motivo: devolver o recuo que o reset tirou */
-}
-
-#links-externos li {
-    margin-bottom: 0.5rem;
-}
-
-#links-externos a {
-    color: var(--azul2);
-}
-
-#links-externos a:hover {
-    color: var(--azul);
-}
-
-
-/* =====================================================================
-   14. ELEMENTO EXTRA: transition
-   O que é: anima a mudança de uma propriedade CSS ao longo do tempo.
-   Sem transition, a cor muda de uma vez no :hover; com ela, a mudança
-   acontece de forma gradual.
-
-   Como funciona: transition: <propriedade> <duração> <curva>;
-     - color / box-shadow: qual propriedade será animada
-     - 0.3s: quanto tempo a animação dura (300 milissegundos)
-     - ease: curva de velocidade (começa devagar, acelera e desacelera
-       no fim), o que deixa o movimento mais natural
-
-   A transition fica no estado normal, não no :hover. Assim ela funciona
-   nos dois sentidos: quando o mouse entra e quando sai.
-
-   Por que escolhemos: deixa a navegação mais agradável sem distrair,
-   e reforça visualmente qual elemento está sob o mouse.
-
-   Os seletores .link-nav e .card-tech já apareceram antes. As regras
-   se SOMAM (cascata). Deixamos aqui separado para o professor achar fácil.
-   ===================================================================== */
-
-.link-nav {
-    transition: color 0.3s ease;
-}
-
-.card-tech {
-    transition: box-shadow 0.3s ease;
-}
-
-
-/* Sombra com rgba() a partir do --azul (26, 58, 92), como o enunciado autoriza.
-   box-shadow: deslocamento para o lado (0), para baixo (4px), desfoque (12px), cor. */
-
-.card-tech:hover {
-    box-shadow: 0 4px 12px rgba(26, 58, 92, 0.15);
 }

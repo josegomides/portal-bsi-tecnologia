@@ -1,33 +1,59 @@
 <!DOCTYPE html>
+<!-- DOCTYPE: avisa ao navegador que este arquivo é HTML5. Tem que ser a PRIMEIRA linha:
+     qualquer coisa antes dele, até um comentário, pode fazer o navegador entrar em "modo de compatibilidade". -->
+
+<!-- lang="pt-BR": diz o idioma da página. Ajuda leitores de tela e o Google. -->
 <html lang="pt-BR">
 
+<!-- HEAD: informações sobre a página. Nada daqui aparece no conteúdo da tela. -->
+
 <head>
+    <!-- Faz os acentos (á, ç, ã) aparecerem certos. -->
     <meta charset="UTF-8">
+
+    <!-- Faz a página se ajustar à largura da tela do celular. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que aparece na aba do navegador. -->
     <title>Tecnologias | Portal BSI</title>
+
+    <!-- preconnect: abre a conexão com o Google Fonts antes, para a fonte carregar mais rápido. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Carrega a fonte Inter (pesos 400, 600 e 700). Exigência do enunciado. -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Liga o nosso CSS externo. O enunciado proíbe CSS dentro do HTML. -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ===================== CABEÇALHO =====================
+         Modelo padronizado pela turma (feito pelo grupo da Home).
+         O menu tem que ser idêntico em todas as páginas. -->
     <header id="cabecalho">
-        <a href="index.html" class="logo">Portal BSI</a>
-        <nav id="menu-principal">
+        <nav id="menu-cabecalho">
+            <h1 id="nome-cabecalho">Portal da Turma</h1>
             <ul>
                 <li><a href="index.html" class="link-nav">Home</a></li>
-                <li><a href="turma.html" class="link-nav">A turma</a></li>
-                <li><a href="projetos.html" class="link-nav">Projetos</a></li>
-                <li><a href="campus.html" class="link-nav">Campus &amp; Região</a></li>
-                <li><a href="tecnologias.html" class="link-nav ativo">Tecnologias</a></li>
-                <li><a href="contato.html" class="link-nav">Contato &amp; Eventos</a></li>
+                <li><a href="turma.html" class="link-nav">Turma</a></li>
+                <li><a href="projetos.html" class="link-nav">Projeto</a></li>
+                <li><a href="campus.html" class="link-nav">Campus</a></li>
+                <li><a href="tecnologias.html" class="link-nav">Tecnologia</a></li>
+                <li><a href="contato.html" class="link-nav">Contato</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- ===================== CONTEÚDO PRINCIPAL =====================
+         main: o conteúdo principal da página. Só existe um por página. -->
     <main>
+        <!-- Título desta página. -->
         <h1>Tecnologias</h1>
+
+        <!-- Cada parte do conteúdo é uma section com a classe "secao".
+             Regra do enunciado: TODA section tem um h2.
+             O id serve de âncora: um link com "#introducao" leva direto até aqui. -->
         <section class="secao" id="introducao">
             <h2>A stack web</h2>
             <p>Toda página web é construída sobre três camadas: o HTML define a estrutura e o conteúdo, o CSS define a aparência e o JavaScript define o comportamento. Nesta página reunimos as tecnologias que estudamos no curso, com os conceitos principais
@@ -37,11 +63,18 @@
         <section class="secao" id="tecnologias">
             <h2>Tecnologias estudadas</h2>
 
+            <!-- Cada card é um article: um conteúdo que faz sentido sozinho.
+                 Por isso article, e não div (que não diz nada sobre o conteúdo). -->
             <article class="card-tech">
                 <h3>HTML</h3>
                 <p>Linguagem de marcação que organiza o conteúdo da página. Serve para dizer ao navegador o que cada parte é: título, parágrafo, lista, tabela, navegação.</p>
+
+                <!-- dl = lista de definições.
+                     dt = o termo.  dd = a explicação do termo. -->
                 <dl>
                     <dt>Tag</dt>
+                    <!-- &lt; e &gt; mostram os símbolos < e > na tela.
+                         Se escrevêssemos <p> direto, o navegador acharia que é uma tag de verdade. -->
                     <dd>Marcação entre sinais de menor e maior que delimita um elemento, como &lt;p&gt; e &lt;/p&gt;.</dd>
                     <dt>Atributo</dt>
                     <dd>Informação extra dentro da tag de abertura, como href em um link ou alt em uma imagem.</dd>
@@ -89,22 +122,33 @@
                 </dl>
             </article>
         </section>
+
+        <!-- ===================== TABELA COMPARATIVA ===================== -->
         <section class="secao" id="comparativo">
             <h2>HTML vs CSS vs JavaScript</h2>
             <table class="tabela-comparativa">
+                <!-- caption: o título da tabela. O leitor de tela lê isso primeiro. -->
                 <caption>Comparação entre as três tecnologias da camada front-end</caption>
+
+                <!-- thead: a linha de cabeçalho. -->
                 <thead>
                     <tr>
+                        <!-- th = célula de cabeçalho.
+                             scope="col": este th é o título de uma COLUNA (acessibilidade). -->
                         <th scope="col">Tecnologia</th>
                         <th scope="col">Responsabilidade</th>
                         <th scope="col">Linguagem</th>
                         <th scope="col">Quando usar</th>
                     </tr>
                 </thead>
+
+                <!-- tbody: as linhas de dados. -->
                 <tbody>
                     <tr>
+                        <!-- scope="row": este th é o título da LINHA. td = célula comum. -->
                         <th scope="row">HTML</th>
                         <td>Estrutura e conteúdo da página</td>
+                        <!-- Cuidado: HTML NÃO é linguagem de programação. É de marcação. -->
                         <td>De marcação</td>
                         <td>Sempre: é a base de qualquer página web</td>
                     </tr>
@@ -123,6 +167,9 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- ===================== BOAS PRÁTICAS =====================
+             ol = lista NUMERADA. O enunciado pede ol com pelo menos cinco itens. -->
         <section class="secao" id="boas-praticas">
             <h2>Boas práticas</h2>
             <ol>
@@ -138,18 +185,38 @@
 
     </main>
 
+    <!-- ===================== ASIDE =====================
+         aside: conteúdo complementar, que não é o assunto principal.
+         Por isso fica FORA do main. -->
     <aside id="links-externos">
         <h2>Para se aprofundar</h2>
+        <!-- ul: vários links do mesmo tipo, sem ordem. -->
         <ul>
+            <!-- target="_blank": abre o link em outra aba.
+                 rel="noopener noreferrer": segurança. A aba nova não consegue mexer
+                 na nossa página e não fica sabendo de onde o visitante veio.
+                 O texto do link diz para onde ele leva ("clique aqui" é ruim). -->
             <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer">MDN Web Docs: referência de HTML, CSS e JavaScript em português</a></li>
             <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">Validador de HTML do W3C</a></li>
             <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks: artigos e guias sobre técnicas de CSS</a></li>
         </ul>
     </aside>
 
+    <!-- ===================== RODAPÉ =====================
+         Modelo padronizado pela turma. A linha do Grupo 5 foi acrescentada
+         porque o enunciado pede os créditos do grupo no rodapé. -->
     <footer id="rodape">
-        <p>Grupo 5 — José Antonio, Yuri Eduardo, Mateus Martins, Caique Kubo, Kaiky Eduardo — Programação Web I, IF Goiano Campus Ceres</p>
-        <p><a href="index.html">Voltar para a Home</a></p>
+        <p>Portal da Turma - BSI 4º período IF Goiano - Campus Ceres</p>
+        <p>
+            Desenvolvido pelo
+            <strong>
+          4° Período de 2026 do curso de Bacharelado em Sistemas de
+          Informação</strong
+        >
+        - Programação Web I - 2026/2
+      </p>
+      <p>Página Tecnologias: Grupo 5 (José Antonio, Yuri Eduardo, Mateus Martins, Caique Kubo, Kaiky Eduardo)</p>
+      <a href="index.html" class="link-rodape">Voltar à Home</a>
     </footer>
 
 </body>
